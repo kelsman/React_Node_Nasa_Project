@@ -6,6 +6,9 @@ const path = require('path');
 const morgan = require('morgan')
 const planetRouter = require('./routes/planets/planet.router');
 const launchesRouter = require('./routes/launches/launches.router');
+
+
+
 // middlewres
 app.use(express.json())
 app.use(cors({
