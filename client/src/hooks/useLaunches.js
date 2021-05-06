@@ -11,6 +11,7 @@ function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
   const [isPendingLaunch, setPendingLaunch] = useState(false);
 
   const getLaunches = useCallback(async () => {
+
     const fetchedLaunches = await httpGetLaunches();
     saveLaunches(fetchedLaunches);
   }, []);
@@ -21,7 +22,7 @@ function useLaunches(onSuccessSound, onAbortSound, onFailureSound) {
 
   const submitLaunch = useCallback(async (e) => {
     e.preventDefault();
-    // setPendingLaunch(true);
+    setPendingLaunch(true);
     const data = new FormData(e.target);
     const launchDate = new Date(data.get("launch-day"));
     const mission = data.get("mission-name");
