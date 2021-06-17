@@ -14,7 +14,7 @@
     "cluster": "pm2 start src/server.js -i max",
     "install-client": "npm install --prefix client",
     "heroku-postbuild": "npm run install-client && npm run build --prefix client",
-    "deploy:heroku": "git add . && git commit -am serverbuild && git push heroku master"
+    "deploy:heroku": "git add . && git commit -am serverbuild && git push origin heroku master"
   },
   "keywords": [],
   "author": "kels",

@@ -7,8 +7,6 @@ const { getaHabitablePlanets } = require('./models/planets.model');
 const { loadLaunchData } = require('./models/launches.model');
 
 const server = http.createServer(app);
-const MONGO_URL = "mongodb+srv://kelvin22:kelvin22@nasacluster.iir5b.mongodb.net/nasa?retryWrites=true&w=majority";
-
 
 async function startServer() {
     await mongoConnect();
