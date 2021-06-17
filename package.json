@@ -10,7 +10,7 @@
     "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch",
     "watch": "nodemon src/server.js",
-    "start": "pm2 start src/server.js -i max",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
     "cluster": "pm2 start src/server.js -i max",
     "install-client": "npm install --prefix client",
     "heroku-postbuild": "npm run install-client && npm run build --prefix client",
