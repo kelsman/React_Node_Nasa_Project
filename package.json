@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Nasa Mission Control Api",
   "main": "server.js",
+  "engines": {
+    "node": "16.2.0"
+  },
   "scripts": {
     "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch",
@@ -12,10 +15,7 @@
     "install-server": "npm install",
     "install-client": "npm install --prefix client",
     "install": "npm run install-server  && npm run install-client",
-    "server": "npm run watch --prefix server",
-    "client": "npm run start --prefix client",
     "heroku-postbuild": "npm run build --prefix client",
-    "deploy:cluster": "npm run build --prefix client && npm run cluster --prefix server",
     "deploy:heroku": "git add . && git commit -am serverbuild && git push heroku master"
   },
   "keywords": [],
