@@ -12,10 +12,8 @@
     "watch": "nodemon src/server.js",
     "start": "pm2 start src/server.js -i max",
     "cluster": "pm2 start src/server.js -i max",
-    "install-server": "npm install",
     "install-client": "npm install --prefix client",
-    "install": "npm run install-server  && npm run install-client",
-    "heroku-postbuild": "npm run build --prefix client",
+    "heroku-postbuild": "npm run install-client && npm run build --prefix client",
     "deploy:heroku": "git add . && git commit -am serverbuild && git push heroku master"
   },
   "keywords": [],
