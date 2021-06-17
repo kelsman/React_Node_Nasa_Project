@@ -9,19 +9,17 @@ const api = require('./routes/api')
 
 // middlewres
 app.use(express.json())
-app.use(cors({
-    origin: 'http://localhost:3000'
-}));
+app.use(cors());
 if (process.env.NODE_ENV !== "production") {
     app.use(morgan('dev'))
 }
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, './client/build')))
 // routes
 app.use('/v1', api);
 
 
 app.get('/*', (req, res) => {
-    return res.sendFile(path.join(__dirname, "public", "index.html"))
+    return res.sendFile(path.join(__dirname, './client/build', "index.html"))
 })
 
 
