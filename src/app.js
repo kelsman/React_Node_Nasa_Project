@@ -13,7 +13,7 @@ app.use(cors());
 if (process.env.NODE_ENV !== "production") {
     app.use(morgan('dev'))
 }
-app.use(express.static(path.join(__dirname, './client/build')))
+app.use(express.static('public'))
 // routes
 app.use('/v1', api);
 
