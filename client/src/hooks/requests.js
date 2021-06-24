@@ -3,7 +3,7 @@ const API_URL = "https://shrouded-cove-39339.herokuapp.com"
 
 async function httpGetPlanets() {
   try {
-    const response = await fetch('/planets');
+    const response = await fetch('/v1/planets');
     const data = await response.json()
     return data
 
