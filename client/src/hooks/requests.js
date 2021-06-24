@@ -15,7 +15,7 @@ async function httpGetPlanets() {
 
 async function httpGetLaunches() {
   // TODO: Once API is ready.
-  const response = await fetch(`/launches`)
+  const response = await fetch(`/v1/launches`)
   const fetchedLaunches = await response.json();
   return fetchedLaunches.sort((a, b) => {
     return a.flightNumber - b.flightNumber
@@ -26,7 +26,7 @@ async function httpGetLaunches() {
 async function httpSubmitLaunch(launch) {
   // TODO: Once API is ready.
   try {
-    return await fetch(`/launches`, {
+    return await fetch(`/v1/launches`, {
       method: 'POST',
       body: JSON.stringify(launch),
       headers: {
@@ -46,7 +46,7 @@ async function httpSubmitLaunch(launch) {
 async function httpAbortLaunch(id) {
   // TODO: Once API is ready.
   try {
-    return await fetch(`/launches/${id}/`, {
+    return await fetch(`/v1/launches/${id}/`, {
       method: 'delete',
     })
 
