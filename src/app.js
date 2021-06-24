@@ -7,13 +7,15 @@ const morgan = require('morgan')
 const api = require('./routes/api')
 
 
+
 // middlewres
 app.use(express.json())
 app.use(cors());
 if (process.env.NODE_ENV !== "production") {
     app.use(morgan('dev'))
 }
-app.use(express.static(path.join(__dirname, './client/build')))
+app.use(express.static('public'))
+app.use(express.static('./client/build'))
 
 // routes
 app.use('/v1', api);
