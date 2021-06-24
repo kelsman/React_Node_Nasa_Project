@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8000/v1"
+const API_URL = "https://shrouded-cove-39339.herokuapp.com"
 
 async function httpGetPlanets() {
   const response = await fetch(`${API_URL}/planets`);
