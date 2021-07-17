@@ -47,7 +47,6 @@ async function getAllPlanets() {
         "__v": 0,
         "_id": 0,
 
-
     });
 }
 async function savePlanet(planet) {

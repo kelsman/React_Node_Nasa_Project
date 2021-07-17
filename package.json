@@ -13,7 +13,7 @@
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "cluster": "pm2 start src/server.js -i max",
     "install-client": "npm install --prefix client",
-    "heroku-postbuild": "npm run install-client && npm run build --prefix client",
+    "heroku-postbuild": " NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build --prefix client",
     "deploy:heroku": "git add . && git commit -am serverbuild && git push heroku master"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "csv-parse": "^4.15.4",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.7",
     "morgan": "^1.10.0",
