@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: "NoFixedAddress",
+    name: "Node_Nasa",
     script: "src/server.js",
     instances: "max",
     env: {
